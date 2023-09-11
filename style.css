@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+:root {
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+    --font-size: 13px;
+}
+
+body {
+    background-color: var(--Light-grayish-blue);
+}
+
+section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1300px;
+    height: 800px;
+}
+
+.contanier {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.card-1 {
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-color: var(--Moderate-violet);
+    background-position: 90% 0%;
+    background-repeat: no-repeat;
+    grid-column: span 2;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.card-2 {
+    background-color: var(--Very-dark-grayish-blue);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.card-3 {
+    background-color: var(--White);
+    padding: 30px;
+    border-radius: 10px;
+    order: 4;
+    height: fit-content;
+}
+
+.card-4 {
+    background-color: var(--Very-dark-blackish-blue);
+    border-radius: 10px;
+    padding: 30px;
+    order: 5;
+    grid-column: span 2;
+    height: fit-content;
+}
+
+.card-5 {
+    background-color: var(--White);
+    padding: 30px;
+    border-radius: 10px;
+    grid-row: span 2;
+    height: fit-content;
+}
+
+.profil-name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.card-1 h4,
+.card-2 h4,
+.card-4 h4 {
+    color: var(--Light-gray)
+}
+
+
+.card-1 .profil-name p,
+.card-2 .profil-name p,
+.card-4 .profil-name p {
+    color: var(--Light-gray);
+    opacity: 50%;
+    font-size: 16px;
+}
+
+.profil-name+p {
+    color: var(--White);
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.card-1 .profil-name+p {
+    padding-right: 20px;
+}
+
+.card-3 .profil-name+p {
+    padding-right: 30px;
+}
+
+.card-3 .profil-name+p,
+.card-5 .profil-name+p {
+    color: var(--Very-dark-blackish-blue);
+}
+
+.card-3 h4,
+.card-5 h4 {
+    color: var(--Very-dark-blackish-blue);
+}
+
+.card-3 .profil-name p,
+.card-5 .profil-name p {
+    color: var(--Very-dark-blackish-blue);
+    opacity: 50%;
+    font-size: 16px;
+}
+
+.card-1 p:nth-of-type(2),
+.card-2 p:nth-of-type(2),
+.card-4 p:nth-of-type(2) {
+    font-size: 16px;
+    color: var(--Light-gray);
+    opacity: 50%;
+    margin-top: 30px;
+    line-height: 1.4;
+
+}
+
+.card-3 p:nth-of-type(2),
+.card-5 p:nth-of-type(2) {
+    font-size: 16px;
+    color: var(--Very-dark-blackish-blue);
+    opacity: 50%;
+    margin-top: 30px;
+    line-height: 1.4;
+}
+
+@media screen and (max-width:375px) {
+    section {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 375px;
+        height: 667px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contanier {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, auto);
+        row-gap: 10px;
+        width: 350px;
+    }
+
+    .card-1 {
+        background-image: url(images/bg-pattern-quotation.svg);
+        background-color: var(--Moderate-violet);
+        background-position: 90% 0%;
+        background-repeat: no-repeat;
+        grid-column: span 1;
+        padding: 30px;
+        border-radius: 10px;
+        height: fit-content;
+    }
+
+    .card-2 {
+        background-color: var(--Very-dark-grayish-blue);
+        padding: 30px;
+        border-radius: 10px;
+        height: fit-content;
+    }
+
+    .card-3 {
+        background-color: var(--White);
+        padding: 30px;
+        border-radius: 10px;
+        order: 3;
+        height: fit-content;
+    }
+
+    .card-4 {
+        background-color: var(--Very-dark-blackish-blue);
+        border-radius: 10px;
+        padding: 30px;
+        order: 4;
+        grid-column: span 1;
+        height: fit-content;
+    }
+
+    .card-5 {
+        background-color: var(--White);
+        padding: 30px;
+        border-radius: 10px;
+        grid-row: span 1;
+        height: fit-content;
+        order: 5;
+    }
+
+    .profil-name {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    img {
+        width: 50px;
+        height: 50px;
+        border: 1px solid white;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+
+
+    .card-1 h4,
+    .card-2 h4,
+    .card-4 h4 {
+        color: var(--Light-gray)
+    }
+
+
+    .card-1 .profil-name p,
+    .card-2 .profil-name p,
+    .card-4 .profil-name p {
+        color: var(--Light-gray);
+        opacity: 50%;
+        font-size: 16px;
+    }
+
+    .profil-name+p {
+        color: var(--White);
+        font-size: 23px;
+        font-weight: 600;
+    }
+
+    .card-1 .profil-name+p {
+        padding-right: 20px;
+    }
+
+    .card-3 .profil-name+p {
+        padding-right: 30px;
+    }
+
+    .card-3 .profil-name+p,
+    .card-5 .profil-name+p {
+        color: var(--Very-dark-blackish-blue);
+    }
+
+    .card-3 h4,
+    .card-5 h4 {
+        color: var(--Very-dark-blackish-blue);
+    }
+
+    .card-3 .profil-name p,
+    .card-5 .profil-name p {
+        color: var(--Very-dark-blackish-blue);
+        opacity: 50%;
+        font-size: 16px;
+    }
+
+    .card-1 p:nth-of-type(2),
+    .card-2 p:nth-of-type(2),
+    .card-4 p:nth-of-type(2) {
+        font-size: 16px;
+        color: var(--Light-gray);
+        opacity: 50%;
+        margin-top: 30px;
+        line-height: 1.4;
+
+    }
+
+    .card-3 p:nth-of-type(2),
+    .card-5 p:nth-of-type(2) {
+        font-size: 16px;
+        color: var(--Very-dark-blackish-blue);
+        opacity: 50%;
+        margin-top: 30px;
+        line-height: 1.4;
+    }
+}
